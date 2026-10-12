@@ -20,6 +20,12 @@ font, sound or executable is bundled. The project license does not cover those
 assets, game names or trademarks. World of Warcraft belongs to Blizzard
 Entertainment; Fishcraft is an independent addon.
 
+The README also embeds screenshots and a radial-menu GIF from the maintainer's
+public CurseForge gallery. Those media files remain hosted on CurseForge and
+are not included in the repository or release archives. Game imagery shown
+within them is not relicensed under GPL by this project. See
+[media provenance](docs/SCREENSHOTS.md) for the original links.
+
 ## Code references and dependencies
 
 No vendored addon library or separately licensed copied source was identified

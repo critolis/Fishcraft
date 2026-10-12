@@ -24,10 +24,26 @@ and known data limitations.
 
 ## Screenshots and radial-menu preview
 
-No verified screenshot or animation of the current release is bundled in this
-repository yet. See the [CurseForge project](https://www.curseforge.com/wow/addons/fishcraft)
-for its gallery. The [media checklist](docs/SCREENSHOTS.md) describes the screenshots
-and short radial-menu recording planned for this section.
+From the [Fishcraft gallery on CurseForge](https://www.curseforge.com/wow/addons/fishcraft).
+
+### Radial menu in action
+
+![Animated Fishcraft radial fishing menu](https://media.forgecdn.net/attachments/2040/783/wowb_xl1tb6sagi-ezgif-com-optimize-gif.gif)
+
+### Fish discoveries
+
+![Fishcraft Discoveries journal](https://media.forgecdn.net/attachments/2040/750/1-fishcraft-fish-discoveries-png.png)
+
+### Fishing statistics
+
+![Fishcraft fishing statistics](https://media.forgecdn.net/attachments/2040/751/fishcraft-fishing-statistics-png.png)
+
+### Radial fishing menu
+
+![Fishcraft radial fishing menu](https://media.forgecdn.net/attachments/2040/752/fishcraft-radial-fishing-menu-png.png)
+
+Media is hosted on CurseForge. See [media provenance](docs/SCREENSHOTS.md)
+and [third-party notices](THIRD_PARTY_NOTICES.md).
 
 ## Installation
 

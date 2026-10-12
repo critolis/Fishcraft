@@ -1,17 +1,25 @@
 # Screenshots and animation
 
-Current-release in-game media is not included yet. Older recordings and local
-layout mockups were not copied into the public repository: they do not verify
-1.0.0 and may expose character names or private chat.
+The README embeds three screenshots and an animated GIF from the maintainer's
+public [CurseForge gallery](https://www.curseforge.com/wow/addons/fishcraft),
+at the maintainer's request. The links were checked on 12 October 2026:
 
-For a future README gallery, capture:
+- [Fish Discoveries](https://media.forgecdn.net/attachments/2040/750/1-fishcraft-fish-discoveries-png.png)
+- [Fishing Statistics](https://media.forgecdn.net/attachments/2040/751/fishcraft-fishing-statistics-png.png)
+- [Radial Fishing Menu](https://media.forgecdn.net/attachments/2040/752/fishcraft-radial-fishing-menu-png.png)
+- [Radial menu animation](https://media.forgecdn.net/attachments/2040/783/wowb_xl1tb6sagi-ezgif-com-optimize-gif.gif)
 
-- The radial menu opening and closing (a short GIF or WebM).
-- Discoveries with caught and unseen fish plus a milestone badge.
-- Cooking Planner and the Statistics view.
+These are remote embeds, not files included in the addon or source ZIP. Their
+availability depends on the CurseForge media host. They illustrate the addon;
+the gallery does not establish the exact client/addon build used for each capture
+or replace the release acceptance checklist. Local layout mockups and private
+recordings are not published.
+
+## Future captures
 
 Record the addon and client versions. Crop private chat, player/guild/server
 identifiers and account paths. Use your own captures; distinguish actual client
-screenshots from mockups. Add approved files under `docs/images/` and link only
-files that exist. Do not describe screenshots containing game imagery as wholly
-original GPL-licensed artwork.
+screenshots from mockups. If media is bundled in the repository later, update
+the source-package allowlist and review each file before publishing it.
+Do not describe screenshots containing game imagery as wholly original
+GPL-licensed artwork; see [third-party notices](../THIRD_PARTY_NOTICES.md).
