@@ -1,0 +1,3 @@
+local _, F = ...
+-- English source strings are keys. Future locales can override individual entries.
+F.L = setmetatable({}, { __index = function(_, key) return key end })

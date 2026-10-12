@@ -1,0 +1,33 @@
+## Interface: 16001
+## Title: Fishcraft
+## Notes: A quiet companion for every cast. Fishing tools for WoW Forever.
+## Author: Fishcraft
+## Version: 1.0.0
+## X-License: GPL-3.0-only
+## SavedVariablesPerCharacter: FishcraftDB
+## IconTexture: Interface\AddOns\Fishcraft\Media\Hook
+
+Core\Bootstrap.lua
+Localization\enUS.lua
+Core\Model.lua
+Compatibility\API.lua
+Data\Catalog.lua
+Data\Forever.lua
+Data\Optimizer.lua
+Data\Discoveries.lua
+Equipment\Equipment.lua
+Lures\Lures.lua
+Fishing\Statistics.lua
+Fishing\Session.lua
+Fishing\Optimizer.lua
+Journal\Collection.lua
+Journal\Discoveries.lua
+Locations\Locations.lua
+Cooking\Planner.lua
+UI\Theme.lua
+UI\Components.lua
+UI\Panels.lua
+UI\Workspace.lua
+UI\Discoveries.lua
+UI\Radial.lua
+Core\Main.lua

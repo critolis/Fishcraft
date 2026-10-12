@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.lua text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.toc text eol=lf
+*.yml text eol=lf
+*.txt text eol=lf
+LICENSE text eol=lf
+*.tga binary
+*.png binary
+*.gif binary
+*.webm binary

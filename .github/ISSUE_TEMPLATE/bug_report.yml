@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a reproducible Fishcraft problem.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "Redact personal details. Do not attach credentials, your WTF folder or real SavedVariables."
+  - type: input
+    id: addon-version
+    attributes:
+      label: Addon version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: client-version
+    attributes:
+      label: WoW Forever client version and build
+      description: "Include the client information from /fc diag."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: lua-error
+    attributes:
+      label: First Lua error
+      description: "Paste the first error, or write None. Remove personal paths."
+      render: text
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots and additional context
+      description: "Optional; crop or redact character names and private chat."

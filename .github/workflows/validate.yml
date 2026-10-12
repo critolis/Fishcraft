@@ -1,0 +1,48 @@
+name: Validate and package
+on:
+  pull_request:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.13'
+      - name: Install development dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: Lua behavior and TOC loading
+        run: python tests/run.py
+      - name: Packaging regression tests
+        run: python -m unittest discover -s tests -p 'test_*.py'
+      - name: Validate source
+        run: python tools/package.py --check
+      - name: Build installable and source archives
+        env:
+          REF_TYPE: ${{ github.ref_type }}
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          if [ "$REF_TYPE" = "tag" ]; then
+            python tools/package.py --tag "$REF_NAME"
+          else
+            python tools/package.py
+          fi
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: Fishcraft-packages
+          path: |
+            dist/Fishcraft-*.zip
+            dist/SHA256SUMS.txt
+          if-no-files-found: error
+          retention-days: 30

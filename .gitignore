@@ -1,0 +1,49 @@
+# Generated releases and local test artifacts
+/dist/
+/work/
+/tmp/
+/local/
+/test-results/
+/coverage/
+*.zip
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+# Development environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage*
+htmlcov/
+.idea/
+.vscode/
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+# Private configuration and credentials
+.env
+.env.*
+*.local.*
+credentials*
+secrets*
+*.pem
+*.key
+*.p12
+*.pfx
+.aws/
+.ssh/
+.codex/
+.agents/
+# Never version real game profiles or installations
+WTF/
+SavedVariables/
+Logs/
+Screenshots/
+FishcraftDB.lua

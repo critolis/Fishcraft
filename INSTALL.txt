@@ -1,0 +1,13 @@
+Fishcraft 1.0.0 — World of Warcraft: Forever
+
+Extract the Fishcraft folder into the Forever client's Interface/AddOns folder.
+The final path must be Interface/AddOns/Fishcraft/Fishcraft.toc, without another
+nested Fishcraft folder. Keep your character's SavedVariables when updating.
+Restart the client after first installation and enable Fishcraft in AddOns.
+
+/fc opens the radial menu. /fc settings opens settings. /fc diag prints addon
+and client details. /fishcraft is an alias for /fc.
+
+Download: https://www.curseforge.com/wow/addons/fishcraft
+License: GNU GPL version 3 only; see LICENSE and COPYRIGHT.
+Source distribution details: SOURCE.txt.
