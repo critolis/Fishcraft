@@ -2,6 +2,12 @@
 
 Reviewed on 12 October 2026. Addon version remains **1.0.0**.
 
+Publication approved and completed on 12 October 2026:
+[critolis/Fishcraft](https://github.com/critolis/Fishcraft) is public.
+The initial commit used a GitHub noreply identity. The first hosted
+[validation run](https://github.com/critolis/Fishcraft/actions/runs/38301149669) passed.
+The preparation-stage findings below are retained as an audit record.
+
 ## Repository boundary and history
 
 The input was the existing Fishcraft 1.0.0 addon tree, not the surrounding agent
@@ -84,8 +90,8 @@ Only the two allowlisted archives and checksums are uploaded as CI artifacts.
   existing CurseForge project URL returned HTTP 403; verify that link in a normal
   browser. The source readme does not invent a GitHub repository URL.
 
-Not performed: new in-game testing, hosted GitHub Actions execution, public
-GitHub creation/push, GitHub Release creation or CurseForge upload.
+Still not performed: new in-game testing, GitHub Release creation or CurseForge
+upload. GitHub publication and hosted validation are recorded above.
 
 ## Added or changed preparation files
 
@@ -102,9 +108,9 @@ source archive or intended public repository.
 
 ## Remaining maintainer actions
 
-Approve public publication before creating/pushing the GitHub project. Review
-your Git author identity and use a noreply address if desired. Follow
-`PUBLISHING.md` for the exact commands and repository settings. Make the matching
+Public publication is complete. Review your Git author identity for future
+contributions and use a noreply address if desired. Follow `PUBLISHING.md` and
+`RELEASING.md` for ongoing development and releases. Make the matching
 source archive permanently available alongside each installable download.
 Add redacted current-version screenshots/animation when available and perform
 the existing client acceptance checklist before claiming client validation.

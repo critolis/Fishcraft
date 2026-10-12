@@ -1,51 +1,37 @@
-# Initial GitHub publication
+# GitHub publication
 
-Prepared repository name: **Fishcraft**
+Fishcraft is public at [critolis/Fishcraft](https://github.com/critolis/Fishcraft).
+The maintainer approved publication on 12 October 2026. Only the standalone
+Fishcraft source tree was published; the surrounding workspace was excluded.
 
-Description: `Fishing companion for WoW Forever: gear, lures, discoveries and session statistics.`
+Description: Fishing companion for WoW Forever: gear, lures, discoveries and session statistics.
 
 Topics: `world-of-warcraft`, `wow-addon`, `lua`, `fishing`, `wow-forever`
 
-The intended account is `critolis`, as returned by the connected GitHub account.
-Publication requires the maintainer's explicit approval. No remote repository
-has been created or changed by this preparation. The existing connector can
-inspect repositories, but does not expose repository creation; GitHub CLI is
-not installed in the preparation environment.
-
-## After approval
-
-From this **Fishcraft** repository root, review `git status --short`, run the
-checks in [RELEASING.md](RELEASING.md), and review the source archive. Never run
-the following from the parent multi-project workspace.
-
-Using GitHub CLI, authenticate interactively with `gh auth login`; do not paste
-tokens into files or commands. First check whether the intended repository
-already exists:
+## Working with the repository
 
 ```sh
-gh repo view critolis/Fishcraft
+git clone https://github.com/critolis/Fishcraft.git
+cd Fishcraft
+python -m pip install -r requirements-dev.txt
+python tests/run.py
+python -m unittest discover -s tests -p "test_*.py"
+python tools/package.py --check
 ```
 
-If it exists, stop and inspect it. Do not overwrite its source or visibility.
-Only proceed with creation after confirming that it is absent and that the
-lookup did not merely fail because of authentication or network trouble.
-Review your local Git author name/email before committing; a GitHub noreply
-address avoids publishing a personal email.
+Use the issue templates for bugs and feature requests. Review local Git author
+settings before committing; a GitHub noreply address avoids publishing a
+personal email. Initial publication used the maintainer's GitHub noreply identity.
+Submit focused pull requests according to [CONTRIBUTING.md](../CONTRIBUTING.md).
+Never force-push to replace existing public history.
 
-```sh
-git add .
-git diff --cached --stat
-git commit -m "Prepare Fishcraft 1.0.0 for open-source publication"
-gh repo create critolis/Fishcraft --public --source=. --remote=origin --push --description "Fishing companion for WoW Forever: gear, lures, discoveries and session statistics."
-gh repo edit critolis/Fishcraft --enable-issues --add-topic world-of-warcraft --add-topic wow-addon --add-topic lua --add-topic fishing --add-topic wow-forever
-```
+## Releases and CurseForge
 
-Alternatively, create an empty public Fishcraft repository on GitHub, enable
-Issues, and add the description/topics in Settings. Do not initialize it with a
-second README or license. After approval and a local initial commit, connect
-and push using the URL shown by GitHub. Use an ordinary push; never force-push.
+Follow [RELEASING.md](RELEASING.md) to build installable and corresponding-source
+ZIPs. CI validates and builds archives; it does not publish GitHub Releases or
+upload to CurseForge. Add the repository URL to the CurseForge Source field and
+provide a persistent corresponding-source link for each addon release. Those
+CurseForge metadata changes remain manual and have not been performed here.
 
-Once published, add the verified repository URL to the CurseForge Source field
-and add a persistent corresponding-source download for each addon release.
-Use the repository issue forms for reports. CI produces artifacts only; public
-release and CurseForge uploads remain manual actions.
+The first hosted [validation run](https://github.com/critolis/Fishcraft/actions/runs/38301149669)
+succeeded. Actual client verification remains separate; see [TESTING.md](TESTING.md).
